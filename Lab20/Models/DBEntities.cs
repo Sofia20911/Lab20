@@ -8,10 +8,11 @@ namespace Lab20.Models
     public partial class DBEntities : DbContext
     {
         public DBEntities()
-            : base("name=DBEntities")
+            : base("name=DBEntities1")
         {
         }
 
+        public virtual DbSet<Accountant> Accountants { get; set; }
         public virtual DbSet<admin> admins { get; set; }
         public virtual DbSet<Analyzer> Analyzers { get; set; }
         public virtual DbSet<InsuranceCompany> InsuranceCompanies { get; set; }
@@ -21,9 +22,23 @@ namespace Lab20.Models
         public virtual DbSet<Service_rendered> Service_rendered { get; set; }
         public virtual DbSet<servicesLab> servicesLabs { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<TypeUser> TypeUsers { get; set; }
+        public virtual DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Accountant>()
+                .HasOptional(e => e.TypeUser)
+                .WithRequired(e => e.Accountant);
+
+            modelBuilder.Entity<admin>()
+                .HasOptional(e => e.TypeUser)
+                .WithRequired(e => e.admin);
+
+            modelBuilder.Entity<LaboratoryAssistant>()
+                .HasOptional(e => e.TypeUser)
+                .WithRequired(e => e.LaboratoryAssistant);
+
             modelBuilder.Entity<servicesLab>()
                 .HasMany(e => e.Orders)
                 .WithOptional(e => e.servicesLab)
@@ -38,6 +53,12 @@ namespace Lab20.Models
                 .HasMany(e => e.Service_rendered)
                 .WithOptional(e => e.servicesLab)
                 .HasForeignKey(e => e.IDservice);
+
+            modelBuilder.Entity<TypeUser>()
+                .HasMany(e => e.Users)
+                .WithRequired(e => e.TypeUser)
+                .HasForeignKey(e => e.IDType)
+                .WillCascadeOnDelete(false);
         }
     }
 }

@@ -9,6 +9,7 @@ namespace Lab20.Models
     [Table("admin")]
     public partial class admin
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ID { get; set; }
 
         [Required]
@@ -18,5 +19,7 @@ namespace Lab20.Models
         [Required]
         [StringLength(50)]
         public string Pass { get; set; }
+
+        public virtual TypeUser TypeUser { get; set; }
     }
 }

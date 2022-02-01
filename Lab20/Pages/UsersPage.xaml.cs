@@ -29,5 +29,15 @@ namespace Lab20.Pages
         {
             Manager.MainFrame.Navigate(new ReportPage());
         }
+
+        private void BTOrder(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new OrderPage());
+        }
+
+        private void BTCode(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

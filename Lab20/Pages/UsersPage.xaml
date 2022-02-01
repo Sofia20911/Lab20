@@ -22,6 +22,8 @@
         </StackPanel>
         <StackPanel Grid.Row="1">
             <Button Content="Отчёт" Width="150" Click="BTReport"/>
+            <Button Content="Создать заказ" Width="150" Click="BTOrder"/>
+            <Button Content="Сгнироровать штрохкод" Width="150" Click="BTCode"/>
         </StackPanel>
     </Grid>
 </Page>

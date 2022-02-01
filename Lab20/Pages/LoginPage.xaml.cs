@@ -28,10 +28,13 @@ namespace Lab20.Pages
 
         private void BTok_Click(object sender, RoutedEventArgs e)
         {
+            var set = Manager.db.Users.ToList();
+
             if (string.IsNullOrEmpty(TBLogin.Text)|| string.IsNullOrEmpty(TBPass.Password))
             {
                 MessageBox.Show("Заполните поля");
             }
+         
             Manager.MainFrame.Navigate(new UsersPage());
         }
     }
