@@ -95,10 +95,10 @@
   <ItemGroup>
     <Compile Include="Manager.cs" />
     <Compile Include="Models\admin.cs" />
+    <Compile Include="Models\admin.cs" />
     <Compile Include="Models\Analyzer.cs" />
     <Compile Include="Models\DBEntities.cs" />
     <Compile Include="Models\InsuranceCompany.cs" />
-    <Compile Include="Models\LaboratoryAssistant.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\PatientData.cs" />
     <Compile Include="Models\servicesLab.cs" />
@@ -149,5 +149,6 @@
   <ItemGroup>
     <Resource Include="Files\laborant_2.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

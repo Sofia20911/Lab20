@@ -23,6 +23,7 @@ namespace Lab20.Pages
         public UsersPage()
         {
             InitializeComponent();
+            
         }
 
         private void BTReport(object sender, RoutedEventArgs e)

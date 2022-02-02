@@ -19,6 +19,12 @@ namespace Lab20.Models
 
         public int IDAnalyzer { get; set; }
 
+        public DateTime? DateTimeReceipts { get; set; }
+
+        public DateTime? DateTimeExecution { get; set; }
+
+        public virtual Analyzer Analyzer { get; set; }
+
         public virtual servicesLab servicesLab { get; set; }
     }
 }

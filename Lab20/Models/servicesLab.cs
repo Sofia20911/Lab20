@@ -15,6 +15,7 @@ namespace Lab20.Models
             Orders = new HashSet<Order>();
             PatientDatas = new HashSet<PatientData>();
             Service_rendered = new HashSet<Service_rendered>();
+            Analyzers = new HashSet<Analyzer>();
         }
 
         [Key]
@@ -41,5 +42,8 @@ namespace Lab20.Models
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Service_rendered> Service_rendered { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Analyzer> Analyzers { get; set; }
     }
 }
