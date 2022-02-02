@@ -32,7 +32,16 @@ namespace Lab20.Pages
             {
                 MessageBox.Show("Заполните поля");
             }
+<<<<<<< Updated upstream
             Manager.MainFrame.Navigate(new UsersPage());
+=======
+            var user = Manager.db.Users.ToList().FirstOrDefault(z=>z.Login==TBLogin.Text);
+            if (user.Password==TBPass.Password)
+            {
+                Manager.MainFrame.Navigate(new UsersPage());
+            }
+               
+>>>>>>> Stashed changes
         }
     }
 }

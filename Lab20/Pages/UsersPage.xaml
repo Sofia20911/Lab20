@@ -17,11 +17,16 @@
             <Image Source="C:\Users\WS\Desktop\Sofia\Lab20\Lab20\Files\laborant_2.png" Width="150" Height="150" Margin="20"/>
             <StackPanel Orientation="Vertical" Margin="40 0 0 0">
                 <TextBlock Text="Роль"/>
-                <TextBlock Text="{Binding LaboratoryAssistant.Name}"/>
+                <TextBlock Text="{Binding Name}"/>
             </StackPanel>
         </StackPanel>
         <StackPanel Grid.Row="1">
             <Button Content="Отчёт" Width="150" Click="BTReport"/>
+<<<<<<< Updated upstream
+=======
+            <Button Content="Создать заказ" Width="150" Click="BTOrder"/>
+            <Button Content="Анализатор" Width="150" Click="BTCode"/>
+>>>>>>> Stashed changes
         </StackPanel>
     </Grid>
 </Page>
